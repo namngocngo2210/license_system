@@ -18,16 +18,21 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+from dotenv import load_dotenv
+
+# Load .env file
+load_dotenv(os.path.join(BASE_DIR, '.env'))
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-l&as5yj05vd)bd4#!blloel+#fta!-!!)0fu_+(s31d_lk=+!k'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-l&as5yj05vd)bd4#!blloel+#fta!-!!)0fu_+(s31d_lk=+!k')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
 
 
 # Application definition
