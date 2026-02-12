@@ -1,6 +1,7 @@
 from django.db.models import Count, Avg
 from django.db.models.functions import TruncDate
 from rest_framework import viewsets, status, views, filters
+from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import LicenseCategory, License, RequestLog
 from .serializers import LicenseCategorySerializer, LicenseSerializer
