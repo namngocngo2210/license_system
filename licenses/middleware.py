@@ -23,8 +23,21 @@ class RequestLoggingMiddleware:
                 response_time=duration,
                 status_code=response.status_code
             )
-        except Exception:
-            # Avoid crashing the request if logging fails
+            # Add detailed console logging for debugging
+            status_color = "\033[92m" if response.status_code < 400 else "\033[91m"
+            reset_color = "\033[0m"
+            print(f"{status_color}[API LOG]{reset_color} {request.method} {request.path} - {response.status_code} ({duration:.2f}ms)")
+            
+            if request.method in ['POST', 'PUT', 'PATCH'] and request.body:
+                try:
+                    import json
+                    body = json.loads(request.body)
+                    print(f"  {status_color}Body:{reset_color} {json.dumps(body, indent=2)}")
+                except:
+                    pass
+
+        except Exception as e:
+            print(f"Logging error: {e}")
             pass
             
         return response
