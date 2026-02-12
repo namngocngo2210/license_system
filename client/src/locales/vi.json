@@ -1,0 +1,73 @@
+{
+    "app_name": "Quản Lý License",
+    "login": {
+        "title": "Chào mừng trở lại",
+        "subtitle": "Đăng nhập để vào hệ thống",
+        "username": "Tên đăng nhập",
+        "password": "Mật khẩu",
+        "submit": "Đăng nhập",
+        "error": "Tên đăng nhập hoặc mật khẩu không đúng"
+    },
+    "sidebar": {
+        "dashboard": "Tổng quan",
+        "categories": "Danh mục",
+        "licenses": "License",
+        "logout": "Đăng xuất"
+    },
+    "dashboard": {
+        "title": "Tổng quan",
+        "total_categories": "Danh mục",
+        "total_licenses": "Tổng License",
+        "active_licenses": "License Kích hoạt",
+        "used_licenses": "License Đã dùng",
+        "avg_response": "Thời gian xử lý TB",
+        "request_stats": "Số lượng Request (7 ngày)",
+        "category_distribution": "Phân bổ theo Danh mục",
+        "loading": "Đang tải thống kê..."
+    },
+    "categories": {
+        "title": "Quản lý Danh mục",
+        "add_new": "Thêm Danh mục",
+        "edit_title": "Sửa Danh mục",
+        "new_title": "Tạo Danh mục mới",
+        "name": "Tên danh mục",
+        "description": "Mô tả",
+        "actions": "Hành động",
+        "save": "Lưu",
+        "update": "Cập nhật",
+        "create": "Tạo mới",
+        "cancel": "Hủy",
+        "delete_confirm": "Bạn có chắc chắn muốn xóa danh mục này?",
+        "success_create": "Đã tạo danh mục",
+        "success_update": "Đã cập nhật danh mục",
+        "success_delete": "Đã xóa danh mục",
+        "no_data": "Chưa có danh mục nào"
+    },
+    "licenses": {
+        "title": "Quản lý License",
+        "generate": "Tạo License",
+        "key": "Mã License",
+        "category": "Danh mục",
+        "status": "Trạng thái",
+        "device_id": "Device ID",
+        "actions": "Hành động",
+        "select_category": "Chọn Danh mục",
+        "cancel": "Hủy",
+        "generate_btn": "Tạo ngay",
+        "delete_confirm": "Bạn có chắc chắn muốn xóa license này?",
+        "success_generate": "Đã tạo license",
+        "success_delete": "Đã xóa license",
+        "copied": "Đã sao chép vào bộ nhớ tạm",
+        "status_used": "Đã dùng",
+        "status_active": "Hoạt động",
+        "status_inactive": "Vô hiệu",
+        "no_data": "Chưa có license nào",
+        "filter": "Lọc",
+        "search_placeholder": "Tìm key hoặc device...",
+        "all_categories": "Tất cả danh mục",
+        "all_status": "Tất cả trạng thái",
+        "prev": "Trước",
+        "next": "Sau",
+        "page": "Trang"
+    }
+}
