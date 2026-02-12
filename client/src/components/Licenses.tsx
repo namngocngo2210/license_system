@@ -113,8 +113,27 @@ const Licenses: React.FC = () => {
     };
 
     const copyToClipboard = (text: string) => {
-        navigator.clipboard.writeText(text);
-        toast.success(t('licenses.copied'));
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(text);
+            toast.success(t('licenses.copied'));
+        } else {
+            // Fallback for non-secure contexts (HTTP)
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            textArea.style.top = "0";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                toast.success(t('licenses.copied'));
+            } catch (err) {
+                toast.error('Failed to copy');
+            }
+            document.body.removeChild(textArea);
+        }
     };
 
     return (
